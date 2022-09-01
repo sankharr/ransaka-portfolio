@@ -1,0 +1,45 @@
+.Projects {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+
+  h1 {
+    margin: 0;
+  }
+//   align-items: center;
+  // margin: 0;
+}
+
+.Projects__cardArray {
+  // &:nth-child(1) {
+//   border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 0;
+  // }
+}
+
+.Projects__card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 1.25rem;
+
+  p {
+    text-align: left;
+    &:nth-child(2) {
+        padding-bottom: 5px;
+        // color: red;
+        border-bottom: 1px solid rgb(232, 231, 231);
+        color: #777777;
+    }
+
+    &:nth-child(3) {
+        font-weight: 700;
+    }
+
+    &:nth-child(4) {
+        color: #777777;
+    }
+  }
+}
