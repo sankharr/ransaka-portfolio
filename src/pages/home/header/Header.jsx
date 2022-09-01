@@ -5,14 +5,14 @@ import React from "react";
 import "./Header.scss";
 
 // assets
-import propic from "../../assets/propic.jpeg";
+import propic from "../../../assets/propic.jpeg";
 
 const navItemsArray = ["Home", "About", "Portfolio"];
 
 const Header = () => {
   return (
     <div className="Header">
-      <div className="Header__navbar">
+      {/* <div className="Header__navbar">
         <div className="Header__logo">R. Ravihara</div>
         <div className="Header__navItemsSection">
           {navItemsArray.map((item) => (
@@ -22,7 +22,7 @@ const Header = () => {
           ))}
           <div className="Header__downloadResume">Resume</div>
         </div>
-      </div>
+      </div> */}
 
       <div className="Header__mainSection">
         <img src={propic} className="Header__mainImage" />

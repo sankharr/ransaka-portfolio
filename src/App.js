@@ -2,12 +2,13 @@
 import './App.scss';
 
 // components
-import Header from './components/header/Header';
+import Header from './pages/home/header/Header';
+import Router from './routes';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Router />
     </div>
   );
 }
