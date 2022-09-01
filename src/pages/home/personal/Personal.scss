@@ -1,0 +1,35 @@
+.Personal {
+  padding: 5% 10%;
+  text-align: left;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .Personal__paragraph {
+    margin: 0;
+    padding: 2rem 2rem;
+    border-left: 2px solid #8490ff;
+    color: #777777;
+  }
+
+  button {
+    border: none;
+    margin: 1rem 0 0;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    color: white;
+    background: #8490ff;
+    font-weight: bold;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 0 7px 12px #b5bbf8;
+        cursor: pointer;
+    }
+}
+}
