@@ -8,7 +8,6 @@ import Personal from './personal/Personal'
 import Platforms from './platforms/Platforms'
 import Projects from './projects/Projects'
 import Skills from './skills/Skills'
-import Footer from '../../components/footer/Footer';
 
 
 const Home = () => {
@@ -20,7 +19,6 @@ const Home = () => {
     <Skills />
     <Projects />
     <Platforms />
-    <Footer />
     </>
   )
 }

@@ -7,6 +7,7 @@ import MainLayout from "./layout/MainLayout";
 
 // pages
 import Home from "./pages/home/Home";
+import About from "./pages/about/About";
 
 function Router() {
   return useRoutes([
@@ -16,6 +17,7 @@ function Router() {
       children: [
         { path: "/", element: <Navigate to="/home" /> },
         { path: "home", element: <Home /> },
+        { path: "about", element: <About /> },
       ],
     },
     // { path: "*", element: <Navigate to="/404" replace /> },
