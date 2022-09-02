@@ -1,0 +1,35 @@
+.Platforms {
+  padding: 5% 10%;
+
+//   div {
+//     &:nth-child(1) {
+//       border: 2px solid red;
+//     }
+//   }
+}
+
+.Platforms__cardArray {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+    // background: ;
+}
+
+.Platforms__card {
+    padding: 4rem 0;
+    
+    img {
+        width: 60%;
+    }
+    h3 {
+        // margin: 1rem 0 0;
+    }
+    p {
+        margin: 0;
+    }
+    transition: 0.3s;
+    &:hover {
+        background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+        transform: scale(1.05);
+    }
+}

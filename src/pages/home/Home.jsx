@@ -5,8 +5,10 @@ import React from 'react'
 import Header from './header/Header'
 import Interests from './interests/Interests'
 import Personal from './personal/Personal'
+import Platforms from './platforms/Platforms'
 import Projects from './projects/Projects'
 import Skills from './skills/Skills'
+import Footer from '../../components/footer/Footer';
 
 
 const Home = () => {
@@ -17,6 +19,8 @@ const Home = () => {
     <Interests />
     <Skills />
     <Projects />
+    <Platforms />
+    <Footer />
     </>
   )
 }
