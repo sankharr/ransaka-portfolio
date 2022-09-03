@@ -94,7 +94,7 @@ const Skills = () => {
         1 - Basic &nbsp; &nbsp; 2 - Novice &nbsp; &nbsp; 3 - Intermediate &nbsp;
         &nbsp; 4 - Advanced &nbsp; &nbsp; 5 - Expert
       </p>
-      <div>
+      <div className="Skills__cardContainer">
         {skillsArray.map((item) => (
           <SkillCard
             title={item.title}

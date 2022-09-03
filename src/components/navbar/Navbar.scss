@@ -1,57 +1,126 @@
 .Navbar {
-    display: flex;
-    flex-direction: column;
-    padding: 0 10%;
-    // border: 2px solid red;
-    font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  // border: 2px solid red;
+  font-family: "Poppins";
 }
 
 .Navbar__logo {
-    font-size: 1.5rem;
-    font-weight: bolder;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 .Navbar__navbar {
-    display: flex;
-    // border: 2px solid black;
-    width: 100%;
-    justify-content: space-between;
-    padding: 1rem 0;
-    align-items: center;
+  display: flex;
+  // border: 2px solid black;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 0;
+  align-items: center;
+}
 
+.Navbar__menuIcon {
+  display: none;
+  position: relative;
+  z-index: 3;
+  font-size: 1.25rem;
+  transition: 0.5s;
+
+}
+
+.Navbar__closeIcon {
+  display: none;
+  position: relative;
+  z-index: 3;
+}
+
+.whitewashed {
+  color: white;
 }
 
 .Navbar__navItemsSection {
-    display: flex;
-    font-size: 0.80rem;
-    text-transform: uppercase;
-    font-weight: 700;
+  display: flex;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.Navbar__navItemsSection--mobile {
+  display: none;
+  z-index: 1;
 }
 
 .Navbar__navButton {
-    margin: 0 1rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: 0.5s;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
 
-    &:hover {
-        color: #8490ff;
-    }
+  &:hover {
+    color: #8490ff;
+  }
 }
 
 .Navbar__downloadResume {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  border: 1px solid #8490ff;
+  padding: 0.1rem 1rem;
+  border-radius: 1rem;
+  color: #8490ff;
+  transition: 0.5s;
+
+  &:hover {
+    background: #8490ff;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Navbar {
+    padding: 0 5%;
+  }
+
+  .Navbar__navbar {
     display: flex;
     align-items: center;
-    margin: 0 1rem;
-    border: 1px solid #8490ff;
-    padding: 0.1rem 1rem;
-    border-radius: 1rem;
-    color: #8490ff;
-    transition: 0.5s;
+  }
+  .Navbar__menuIcon {
+    display: block;
+  }
+  .Navbar__closeIcon {
+    display: block;
+    position: absolute;
+    color: white;
+    right: 1rem;
+    top: 1rem;
+  }
 
-    &:hover {
-        background: #8490ff;
-        color: white;
-        cursor: pointer;
-    }
+  .Navbar__navItemsSection {
+    display: none;
+  }
+
+  .Navbar__navItemsSection--mobile {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // border: 2px solid red;
+    padding: 3rem 1rem;
+    top: 0rem;
+    left: 0rem;
+    background: black;
+    opacity: 90%;
+    color: white;
+    width: 50%;
+    height: 30%;
+    border-radius: 0 0 1rem 0;
+  }
+
+  .Navbar__downloadResume {
+    margin: 0.5rem 0;
+  }
 }

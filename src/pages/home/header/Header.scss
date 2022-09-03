@@ -59,3 +59,42 @@ $common-gradient: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
 .Header__mainImage {
     width: 50%;
 }
+
+@media screen and (max-width: 600px) {
+
+    .Header {
+        margin: 5% 0;
+    }
+
+    .Header__mainImage {
+        width: 80%;
+        margin-left: -1rem;
+        // margin-bottom: 2rem;
+    }
+    .Header__leftSection {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: -2rem;
+
+        p {
+            &:nth-child(1) {
+                margin-bottom: 0.5rem;
+            }
+            &:nth-child(2) {
+                font-size: 1.5rem;
+                line-height: 1.7rem;
+            }
+
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+}

@@ -48,7 +48,7 @@ const Interests = () => {
     <div className='Interests'>
         <h1>Areas of Interest</h1>
         <p>Take a look at some of the things I love working on.</p>
-        <div>
+        <div className='Interests__cardContainer'>
             {interestsArray.map((item) =>
             <div className='Interests__card' key={item.title}>
                 <p>{item.icon}</p>

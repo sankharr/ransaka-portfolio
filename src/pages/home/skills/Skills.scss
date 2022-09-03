@@ -8,7 +8,7 @@
   h1 {
     margin: 0;
   }
-  
+
   p {
     color: #777777;
   }
@@ -16,6 +16,11 @@
   div {
     display: flex;
   }
+}
+
+.Skills__cardContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .Skills__card {
@@ -44,10 +49,60 @@
     border-radius: 10px;
 
     div {
-        background:-webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-        
-        height: 8px;
-        border-radius: 10px
+      background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+
+      height: 8px;
+      border-radius: 10px;
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .Skills {
+    padding: 20% 0%;
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      &:nth-child(2) {
+        padding: 0 10%;
+      }
+    }
+  }
+
+  .Skills__cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Skills__card {
+    width: 100%;
+    h4 {
+      margin: 2rem 0 0.5rem;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Skills__cardContainer {
+    flex-wrap: wrap;
+  }
+
+  .Skills__card {
+    margin: 2rem 10%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+    .Skills__cardContainer {
+      flex-wrap: nowrap;
+    }
+  
+    .Skills__card {
+      margin: 2rem 2rem 0;
+    }
+  }

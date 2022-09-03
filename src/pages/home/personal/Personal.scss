@@ -28,8 +28,30 @@
     transition: 0.5s;
 
     &:hover {
-        box-shadow: 0 7px 12px #b5bbf8;
-        cursor: pointer;
+      box-shadow: 0 7px 12px #b5bbf8;
+      cursor: pointer;
     }
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .Personal__paragraph {
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  // .Personal {
+  //     border: 2px solid red;
+  // }
+  .Personal__paragraph {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .Personal__paragraph {
+    font-size: 1rem;
+  }
 }
