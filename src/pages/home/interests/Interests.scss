@@ -19,8 +19,6 @@
     justify-content: center;
     margin-top: 5%;
   }
-
-  
 }
 
 .Interests__card {
@@ -29,8 +27,9 @@
   align-items: center;
   height: 50%;
   width: 25%;
-//   border: 2px solid red;
+  //   border: 2px solid red;
   margin: 2rem 2rem;
+  transition: 0.4s;
 
   p {
     &:nth-child(1) {
@@ -49,7 +48,13 @@
     &:nth-child(3) {
       font-size: 0.9rem;
       width: 90%;
-    //   text-align: center;
+      //   text-align: center;
+    }
+  }
+
+  &:hover {
+    .Interests__card {
+      transform: scale(1.1);
     }
   }
 }

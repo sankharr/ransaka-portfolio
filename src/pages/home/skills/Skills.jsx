@@ -58,6 +58,29 @@ const skillsArray = [
   },
 ];
 
+const techStack = [
+  {
+    title: "Programming Languages",
+    tech: ["Python", "SQL", "R", "Javascript"],
+  },
+  {
+    title: "Machine Learning",
+    tech: ["sklearn", "xgboost", "fbprophet", "pytorch", "sagemaker"],
+  },
+  {
+    title: "Databases",
+    tech: ["Oracle", "snowflake", "Neo4j"],
+  },
+  {
+    title: "Big Data",
+    tech: ["Hive", "Hadoop", "Spark"],
+  },
+  {
+    title: "MLOps",
+    tech: ["AWS sagemaker pipelines", "AWS codecommit", "AWS model monitoring"],
+  },
+];
+
 const SkillCard = ({ title, levelArray }) => {
   return (
     <div className="Skills__card">
@@ -90,17 +113,18 @@ const Skills = () => {
   return (
     <div className="Skills">
       <h1>Skills Expertise</h1>
-      <p>
+      {/* <p>
         1 - Basic &nbsp; &nbsp; 2 - Novice &nbsp; &nbsp; 3 - Intermediate &nbsp;
         &nbsp; 4 - Advanced &nbsp; &nbsp; 5 - Expert
-      </p>
+      </p> */}
       <div className="Skills__cardContainer">
-        {skillsArray.map((item) => (
-          <SkillCard
-            title={item.title}
-            levelArray={item.levelArray}
-            key={item.title}
-          />
+        {techStack.map((item) => (
+          <div className="Skill__card" key={item.title}>
+            <h4>{item.title}</h4>
+            {item.tech.map((element) => (
+              <p>{element}</p>
+            ))}
+          </div>
         ))}
       </div>
     </div>

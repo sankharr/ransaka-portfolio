@@ -1,10 +1,12 @@
 // packages
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // styling
 import "./Personal.scss";
 
 const Personal = () => {
+  const navigate = useNavigate();
   return (
     <div className="Personal">
       <h1>Personal Details</h1>
@@ -31,7 +33,7 @@ const Personal = () => {
           <li>Productionlize of Al/ML solutions</li>
         </ul>
       </div>
-      <button>About Me</button>
+      <button onClick={() => navigate("/about")}>About Me</button>
     </div>
   );
 };

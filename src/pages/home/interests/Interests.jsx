@@ -11,24 +11,24 @@ import { FiUsers } from 'react-icons/fi'
 
 const interestsArray = [
     {
-        title: 'Cloud Compute',
-        subtitle: 'I utilize AWS to develop and productionize machine learning systems.',
+        title: 'Cloud Computing',
+        subtitle: 'Actively using AWS for daily operational and project-related tasks.',
         icon: <GrCloudComputer />
     },
     {
-        title: 'NLP',
-        subtitle: 'I utilize AWS to develop and productionize machine learning systems.',
+        title: 'Recommender Systems',
+        subtitle: 'Utilized AWS and open source frameworks to build recommendation systems for business.',
         icon: <GrLanguage />
     },
     {
-        title: 'Machine Learning',
-        subtitle: 'I utilize AWS to develop and productionize machine learning systems.',
-        icon: <GrVirtualMachine />
+        title: 'User Research and Analytics',
+        subtitle: 'Closely work with business users to identify their requirements and build suitable AI/ML solutions for achieving business goals.',
+        icon: <GrBarChart />
     },
     {
-        title: 'Parallel Computing',
-        subtitle: 'HIVE, Hadoop, and Spark, Oh my!',
-        icon: <GrStackOverflow />
+        title: 'Machine Learning',
+        subtitle: 'Create various machine learning solutions with the help of the AWS echo system.',
+        icon: <GrVirtualMachine />
     },
     {
         title: 'Collaboration',
@@ -37,9 +37,10 @@ const interestsArray = [
     },
     {
         title: 'Data Analytics',
-        subtitle: 'I love telling a story. Getting to the heart of a problem and coming up with a solution.',
+        subtitle: 'Converted business logic into SQL, created dashboards/reports to express finding to non-technical people.',
         icon: <GrBarChart />
     },
+    
 
 ]
 

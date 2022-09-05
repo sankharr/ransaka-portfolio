@@ -8,13 +8,18 @@ import "./Navbar.scss";
 // icons
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-// assets
+// components
+import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 
-const navItemsArray = ["Home", "About", "Portfolio"];
+// assets
+import downloadFile from '../../assets/Resume - Ransaka.pdf';
+
+const navItemsArray = ["Home", "About", "Projects", "Articles"];
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const navigate = useNavigate();
+  const gaEventTracker = useAnalyticsEventTracker("Navbar");
 
   return (
     <div className="Navbar">
@@ -46,12 +51,31 @@ const Navbar = () => {
             <div
               className="Navbar__navButton"
               key={item}
-              onClick={() => navigate(`/${item.toLowerCase()}`)}
+              onClick={() => {
+                navigate(`/${item.toLowerCase()}`);
+                gaEventTracker(item);
+              }}
             >
               {item}
             </div>
           ))}
-          <div className="Navbar__downloadResume">Resume</div>
+          {/* <div
+            className="Navbar__downloadResume"
+            onClick={() => gaEventTracker("downloadResume")}
+          >
+            Resume
+          </div> */}
+          <div className="Navbar__downloadResume">
+            <a
+              href={downloadFile}
+              download="Ransaka_Ravihara_Resume"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => gaEventTracker("downloadResume")}
+            >
+              <div>Download CV</div>
+            </a>
+          </div>
         </div>
         {/* <div className="Navbar__navItemsSection--mobile">
           {navItemsArray.map((item) => (

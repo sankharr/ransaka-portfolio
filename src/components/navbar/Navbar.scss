@@ -72,10 +72,20 @@
   color: #8490ff;
   transition: 0.5s;
 
+  a {
+    color: #8490ff;
+    text-decoration: none;
+  }
+
   &:hover {
     background: #8490ff;
     color: white;
     cursor: pointer;
+
+    a {
+        color: white;
+        // text-decoration: none;
+      }
   }
 }
 

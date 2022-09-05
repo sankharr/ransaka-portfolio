@@ -9,6 +9,7 @@ import MainLayout from "./layout/MainLayout";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
+import Articles from "./pages/articles/Articles";
 
 function Router() {
   return useRoutes([
@@ -19,7 +20,8 @@ function Router() {
         { path: "/", element: <Navigate to="/home" /> },
         { path: "home", element: <Home /> },
         { path: "about", element: <About /> },
-        { path: "portfolio", element: <Portfolio /> },
+        { path: "projects", element: <Portfolio /> },
+        { path: "articles", element: <Articles /> },
       ],
     },
     // { path: "*", element: <Navigate to="/404" replace /> },

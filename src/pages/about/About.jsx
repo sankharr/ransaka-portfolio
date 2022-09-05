@@ -1,5 +1,6 @@
 // packages
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 
 // styling
 import "./About.scss";
@@ -30,24 +31,24 @@ const questionsData = [
 
 const experienceData = [
   {
-    title: "Bachelors in Mathematics and Economics",
-    place: "Baylor University 2017",
-    period: "GPA: 3.86 (On a scale of 4.00)",
+    title: "Bachelor of Science in Computer Science",
+    place: "University of Colombo",
+    period: "2018 - 2020",
   },
   {
-    title: "Business Analyst",
-    place: "DXC Technology",
-    period: "November 2017 - March 2018",
+    title: "Data Science - Intern",
+    place: "Dialog Axiata",
+    period: "October 2020 - May 2021",
   },
   {
-    title: "Bachelors in Mathematics and Economics2",
-    place: "Baylor University 2017",
-    period: "GPA: 3.86 (On a scale of 4.00)",
+    title: "Junior Data Scientist",
+    place: "Dialog Axiata",
+    period: "June 2021 - November 2021",
   },
   {
-    title: "Bachelors in Mathematics and Economics3",
-    place: "Baylor University 2017",
-    period: "GPA: 3.86 (On a scale of 4.00)",
+    title: "Data Scientist",
+    place: "Dialog Axiata",
+    period: "November 2021 - Present",
   },
 ];
 
@@ -66,11 +67,29 @@ const Questions = () => {
             setQuestionCollaps(tempArray);
           }}
         >
-          <div className={!questionCollaps[index] ? "Questions__question--closed" : "Questions__question--open"}>
-          {!questionCollaps[index] ? <MdOutlineExpandMore className="Questions__icon" /> : <MdOutlineExpandLess className="Questions__icon" />}
+          <div
+            className={
+              !questionCollaps[index]
+                ? "Questions__question--closed"
+                : "Questions__question--open"
+            }
+          >
+            {!questionCollaps[index] ? (
+              <MdOutlineExpandMore className="Questions__icon" />
+            ) : (
+              <MdOutlineExpandLess className="Questions__icon" />
+            )}
             {item.question}
           </div>
-          <div className={!questionCollaps[index] ? "Questions__answer" : "Questions__answer expand"}>{item.answer}</div>{" "}
+          <div
+            className={
+              !questionCollaps[index]
+                ? "Questions__answer"
+                : "Questions__answer expand"
+            }
+          >
+            {item.answer}
+          </div>{" "}
           {/* {!questionCollaps[index] && (
             <div className="Questions__question--closed">
               <MdOutlineExpandMore className="Questions__icon" />
@@ -149,26 +168,27 @@ const PersonalDetails = () => {
         <div>
           <h1>Personal Details</h1>
           <p>Here's some more info obout me.</p>
-          <button>About Me</button>
+          {/* <button>About Me</button> */}
         </div>
       </div>
       <p className="PersonalDetails__secondRow">
-        At the beginning of 2018, I didn't know where my life was going. After
-        some serious self-reflection about my passions and interests, I
-        committed to learning everything I could about machine learning, data
-        science, and the tech industry.
-        <br />
-        <br /> After graduating woth a masters in Computer Science from UT
-        Dallas and a year of working at Capital One, I have officially become a
-        Data Scientist in the auto financing organization at Capital One. Here I
-        am utilizing my knowledge of machine learning engineering to build
-        intelligent systems to better the customer experience
+        I am a self taught Data Scientist with a background in Computer Science.
+        After self-studying Data Science, I landed my first job as an intern
+        Data Scientist at Dialog. That's the changing point of my career. Then I
+        started to explore the world of machine learning. You can find my
+        contribution on my kaggle and StackOverflow profiles. I always love to
+        share my knowledge with others. it's not only because I love sharing but
+        also because it sharpens my knowledge.
       </p>
     </>
   );
 };
 
 const About = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <>
       <div className="About__banner">
@@ -179,7 +199,7 @@ const About = () => {
       </div>
       <PersonalDetails />
       <Experience />
-      <Questions />
+      {/* <Questions /> */}
     </>
   );
 };
