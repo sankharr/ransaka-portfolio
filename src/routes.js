@@ -10,6 +10,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Articles from "./pages/articles/Articles";
+import Certifications from "./pages/certifications/Certifications";
 
 function Router() {
   return useRoutes([
@@ -22,6 +23,7 @@ function Router() {
         { path: "about", element: <About /> },
         { path: "projects", element: <Portfolio /> },
         { path: "articles", element: <Articles /> },
+        { path: "certifications", element: <Certifications /> },
       ],
     },
     // { path: "*", element: <Navigate to="/404" replace /> },

@@ -1,24 +1,37 @@
 .Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 5% 10%;
+  color: white;
+  
+
+  h3 {
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+
+  p {
+    margin: 2rem 0;
+  }
+
+  div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    padding: 5% 10%;
+    justify-content: space-between;
+    width: 8rem;
+  }
+
+  a {
+    text-decoration: none;
     color: white;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    // margin: 0 1rem;
 
-    h3 {
-        font-weight: bold;
-        margin: 2rem 0;
+    &:hover {
+      color: rgb(0, 110, 255);
+      transform: scale(1.5);
     }
-
-    p {
-        margin: 2rem 0;
-    }
-
-    div {
-        display: flex;
-        justify-content: space-between;
-        width: 5rem;
-
-    }
+  }
 }

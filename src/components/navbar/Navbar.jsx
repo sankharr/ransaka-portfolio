@@ -14,7 +14,7 @@ import useAnalyticsEventTracker from "../../hooks/useAnalyticsEventTracker";
 // assets
 import downloadFile from '../../assets/Resume - Ransaka.pdf';
 
-const navItemsArray = ["Home", "About", "Projects", "Articles"];
+const navItemsArray = ["Home", "About", "Projects", "Articles", "Certifications"];
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);

@@ -8,7 +8,7 @@ import Router from "./routes";
 
 function App() {
 
-  ReactGA.initialize(process.env.REACT_APP_GA);
+//   ReactGA.initialize(process.env.REACT_APP_GA);
 
   return (
     <div className="App">

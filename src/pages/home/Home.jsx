@@ -7,8 +7,8 @@ import Header from "./header/Header";
 import Interests from "./interests/Interests";
 import Personal from "./personal/Personal";
 import Platforms from "./platforms/Platforms";
-import Projects from "./projects/Projects";
 import Skills from "./skills/Skills";
+import Updates from "./updates/Updates";
 
 const Home = () => {
   useEffect(() => {
@@ -21,7 +21,7 @@ const Home = () => {
       <Personal />
       <Interests />
       <Skills />
-      {/* <Projects /> */}
+      <Updates />
       <Platforms />
     </>
   );

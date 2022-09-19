@@ -122,7 +122,7 @@ const Skills = () => {
           <div className="Skill__card" key={item.title}>
             <h4>{item.title}</h4>
             {item.tech.map((element) => (
-              <p>{element}</p>
+              <p key={element}>{element}</p>
             ))}
           </div>
         ))}
